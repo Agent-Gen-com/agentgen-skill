@@ -115,6 +115,22 @@ agentgen upload logo.png
 
 ---
 
+## Provision a public origin subdomain (free, authenticated only)
+
+Get a dedicated `<id>.agent-gen.com` subdomain for hosting public files. Useful for third-party integrations that require a specific allowed origin (e.g. Tesla virtual key setup).
+
+```sh
+# Create a new origin
+agentgen origin
+# Returns: ID and origin URL (https://<id>.agent-gen.com)
+
+# Upload an EC public key (PEM) to the origin
+agentgen public-key <origin-id> public-key.pem
+# Returns the public URL of the key
+```
+
+---
+
 ## Typical workflow
 
 1. Build HTML with all styles inlined
